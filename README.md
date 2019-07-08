@@ -1,11 +1,15 @@
 # DeepCover
 Xplore GANs to improve businesses
 
-## Run in terminal : python3 get_access_token.py
-Issue : an error occured : raise OAuth2AuthExchangeError(parsed_content.get("error_message", ""))
- instagram.oauth2.OAuth2AuthExchangeError: You must provide a client_id
-Ref debug : https://www.reddit.com/r/Python/comments/5ub6fv/instagrams_python_api_isnt_letting_me_generate_an/
+## Package used to scrap https://github.com/rarcega/instagram-scraper
+$ git clone https://github.com/rarcega/instagram-scraper.git
+$ cd instagram-scraper
+$ virtualenv venv
+$ source venv/bin/activate
+$ python setup.py develop
 
-## Fill ACCESS_TOKEN in config.py
+## Fill user of interest in ig_users.txt
 
-## Run Instagram_scrap notebook
+## Run in bash :
+instagram-scraper -f ig_users.txt -t image -d instagram_images --media-metadata
+
